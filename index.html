@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anshu Yadav Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Anshu Yadav</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Anshu Yadav</span></h1>
+      <h3>IT Graduate | Tech Enthusiast</h3>
+      <p>
+        I’m an IT graduate passionate about building and learning technology. I enjoy working with Python, databases, and web tools to turn ideas into functional solutions. Always curious, always improving
+      </p>
+      <div class="resume">
+        <a href="https://drive.google.com/file/d/1ORSZEKKTcsUIdutB1waDvD2TKofLPPnC/view?usp=sharing" target="_blank" class="resume-button btn">
+          <i class="fas fa-file-alt"></i> Download Resume
+        </a>
+      </div>
+      <div class="social">
+        <div class="social-app"><a href="https://github.com/anshuyadav2" target="_blank"><img src="images/GitHub.png" alt="github"></a></div>
+        <div class="social-app"><a href="https://www.linkedin.com/in/anshuyadav2" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a></div>
+        <div class="social-app"><a href="https://x.com/AnshuYadav_02" target="_blank"><img src="images/twitter.png" alt="twitter"></a></div>
+        <div class="social-app"><a href="mailto:anshuyadav12334@gmail.com" target="_blank"><img src="images/mail.png" alt="mail"></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m Anshu, an IT enthusiast with a passion for coding and exploring
+      new technologies. I have hands-on knowledge in Python, MySQL, basic networking,
+      and web technologies. I enjoy building projects and learning modern development tools
+      to enhance my skills.
+    </p>
+
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">C++</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">HTML/CSS/JS</div>
+      <div class="skill">Basic Networking</div>
+      <div class="skill">Git/GitHub</div>
+      <div class="skill">Automation Tools</div>
+      <div class="skill">Software Development Life Cycle (SDLC)</div>
+      <div class="skill">Oracle Cloud Infrastucture (OCI)</div>
+      <div class="skill">Django</div>
+      <div class="skill">Streamlit</div>
+      <div class="skill">AWS Basics</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card scroll-scale">
+        <div class="project-image">
+          <img src="images/coffee-cup.gif" alt="Coffee Management System" class="project-gif" />
+        </div>
+        <div class="project-content">
+          <h3>Coffee Management System</h3>
+          <p>A web application that allows users to interact with a coffee shop.</p>
+          <div class="project-tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          </div>
+          <div class="project-links"> 
+            <a href="https://github.com/anshuyadav2/Coffee-Management-System.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://anshuyadav2.github.io/Coffee-Management-System" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo 
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card scroll-scale">
+        <div class="project-image">
+          <img src="images/shopping-cart.gif" alt="Shop Management System" class="project-gif" />
+        </div>
+        <div class="project-content">
+          <h3>Shop Management System</h3>
+          <p>
+            A desktop-based application for shopkeepers to manage products, sales,
+            and revenue easily. Built with Python (Tkinter) for GUI and MySQL for database storage.
+          </p>
+          <div class="project-tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anshuyadav2/Shop-Management-System.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card scroll-scale">
+        <div class="project-image">
+          <img src="images/stock.gif" alt="Stock Market Trend Analysis" class="project-gif" />
+        </div>
+        <div class="project-content">
+          <h3>Stock Market Trend Analysis</h3>
+          <p>
+            Stock trend analysis project utilizing Python libraries including Matplotlib and Scikit-learn.
+            Implemented deployment using the Streamlit framework.
+          </p>
+          <div class="project-tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" />
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anshuyadav2/Stock-Market-Trend-Analysis-and-Prediction.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card scroll-scale">
+        <div class="project-image">
+          <img src="images/resume.gif" alt="Portfolio" class="project-gif" />
+        </div>
+        <div class="project-content">
+          <h3>Portfolio</h3>
+          <p>A personal portfolio to showcase my skills and projects.</p>
+          <div class="project-tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anshuyadav2/Portfolio.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certificate-viewer" id="certificate-viewer">
+      <button class="nav-btn prev-btn" id="prev-cert-btn"><i class="fas fa-chevron-left"></i></button>
+      <div class="cert-display-area">
+        <div class="certificate-card active-cert" id="current-cert-card">
+          <div class="certificate-image">
+            <img src="images/cert1.png" alt="OCI Foundations Certificate" id="cert-img" />
+          </div>
+          <div class="certificate-content">
+            <h3 id="cert-title">OCI Foundations Associate</h3>
+            <p id="cert-issuer">Issued by: Oracle</p>
+            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B1C83BACD452CD5407AF3EF5E01FAE5FDA65283285DF88AC72AB8EB8B5CEF894" target="_blank" id="cert-link">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="nav-btn next-btn" id="next-cert-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p id="formStatus" class="status-message"></p>
+    <form class="contact-form" id="contactForm">
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message </button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; <span id="currentYear"></span> Anshu Yadav. All Rights Reserved.
+    <div class="footer-social">
+      <a href="https://github.com/anshuyadav2" target="_blank"><img src="images/GitHub.png" alt="github"></a>
+      <a href="https://www.linkedin.com/in/anshuyadav2" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+      <a href="https://x.com/AnshuYadav_02" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+      <a href="mailto:anshuyadav12334@gmail.com" target="_blank"><img src="images/mail.png" alt="mail"></a>
+    </div>
+    <h5>Mobile No. : +91 9137465657</h5>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* FEATURE: Set global text color for dark background */
+  color: #e2e8f0; 
+}
+
+body {
+  /* FEATURE: Consistent Dark Background */
+  background-color: #283e63; 
+  scroll-behavior: smooth;
+}
+
+/* --- Navigation --- */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Semi-transparent dark background for nav bar */
+  background: rgba(15, 23, 42, 0.95); 
+  backdrop-filter: blur(5px); /* FEATURE: Subtle blur effect */
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #151a23;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #60a5fa; /* Use the main accent color */
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 100px 50px 50px 50px;
+  /* FEATURE: Ensure all sections have the dark background */
+  background-color: #0f172a; 
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #60a5fa;
+}
+
+/* --- Hero (Home Page) - UPDATED FOR BG IMAGE AND CENTERING --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  
+  /* 1. Background Image Properties */
+  background-image: url('images/bg-image.jpg'); /* REPLACE with your actual image path! */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; 
+  
+  /* 2. Center Content */
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  flex-direction: column; /* Stacks the content in the center */
+  
+  /* Reset some of the original flex layout properties */
+  padding: 0; /* Let flex centering handle spacing */
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+/* 3. Dark Overlay for Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark semi-transparent color */
+    background-color: rgba(0, 0, 0, 0.55); /* Increased opacity for better contrast */
+    z-index: 1; 
+}
+
+.hero-content {
+  /* Ensure content is positioned relative and above the overlay */
+  position: relative;
+  z-index: 2; 
+  
+  /* Center the block itself and limit its width */
+  max-width: 700px; 
+  padding: 20px; /* Internal padding */
+  
+  /* Center the text and internal flex items */
+  text-align: center;
+  
+  /* Reset flex properties that conflict with centering */
+  flex: 0 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.hero-content h1 span {
+  color: #60a5fa; /* Main accent color */
+}
+
+.hero-content h2 {
+  color: #94a3b8;
+  margin: 10px 0 20px;
+  font-size: 1.5rem;
+  text-align: center; /* Ensure it remains centered */
+}
+
+.hero-content p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center; /* Ensure it remains centered */
+}
+
+.resume {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex; /* Flex is used to center the button */
+    justify-content: center;
+}
+
+/* Button style applied to resume-button and contact button (via .btn) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #60a5fa;
+    color: #0f172a; /* Dark text for contrast */
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3b82f6; /* Darker blue on hover */
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* .hero-image styles are no longer needed as the image is removed from HTML */
+
+.social {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center the social icons */
+}
+
+.social-app img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+}
+
+.social-app img:hover {
+    transform: scale(1.1);
+}
+
+/* --- About --- */
+#about {
+  /* FEATURE: Slightly different dark shade for subtle contrast */
+  background-color: #1e293b; 
+}
+
+#about p {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #cbd5e1;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  background: #334155; /* Darker skill background */
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: 500;
+  border-left: 3px solid #60a5fa; /* Accent detail */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transitions */
+}
+
+/* REQUESTED FEATURE: Skill highlight on hover */
+.skill:hover {
+    background-color: #60a5fa; /* Accent color on hover */
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.4);
+    color: #0f172a; /* Dark text for contrast */
+    cursor: default;
+}
+
+/* --- Projects --- */
+#projects {
+    background-color: #0f172a; 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    /* FEATURE: Dark, card background */
+    background: #1e293b; 
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #334155;
+}
+
+.project-card:hover {
+    /* FEATURE: Striking hover effect */
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(96, 165, 250, 0.2); 
+    border-color: #60a5fa;
+}
+
+.project-gif {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Changed to cover for a cleaner look */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    background: #000;
+}
+
+.project-content h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.project-tech {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tech img {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.project-links { /* Flex container for links */
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #3b82f6;
+}
+.project-link.disabled {
+    color: #94a3b8;
+    cursor: default;
+    opacity: 0.7;
+}
+
+/* --- Certifications (Single Frame) --- */
+#certifications {
+    background-color: #1e293b;
+}
+
+.certificate-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px; /* Constrain the size of the viewer */
+    margin: 0 auto;
+    gap: 20px;
+    position: relative; /* For absolute positioning of buttons */
+}
+
+.cert-display-area {
+    width: 100%;
+    overflow: hidden; /* Important for transition effect */
+}
+
+.certificate-card {
+    background: #0f172a;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    min-height: 450px; /* Ensure a minimum height */
+    opacity: 0;
+    display: none;
+}
+
+.certificate-card.active-cert {
+    opacity: 1;
+    display: block;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 250px; /* Larger image in single frame */
+    object-fit: contain; /* Use contain to ensure the full certificate is visible */
+    background-color: #1e293b; /* Background for the image area */
+    border-bottom: 1px solid #334155;
+    padding: 10px;
+}
+
+.certificate-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.certificate-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.certificate-content p {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.certificate-content a {
+    color: #60a5fa;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.certificate-content a:hover {
+    color: #3b82f6;
+}
+
+.nav-btn {
+    background: #60a5fa;
+    color: #0f172a;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+    line-height: 1; /* Fix vertical alignment of icon */
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* --- Contact --- */
+#contact {
+  background-color: #0f172a;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  /* FEATURE: Dark input fields */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  font-size: 1rem;
+  background-color: #1e293b; 
+  color: #e2e8f0; 
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #64748b;
+}
+
+/* Removed the specific button styling here and rely on the .btn class added to the HTML button */
+
+.status-message {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #4ade80; /* Success green */
+    min-height: 20px;
+}
+
+/* --- Footer --- */
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+/* --- Navigation Feature: Hamburger Menu --- */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* --- Responsive Layout (Mobile first) --- */
+@media(max-width: 900px){
+    /* Adjusted padding for general section, but hero is managed by flex */
+}
+
+@media(max-width: 768px){
+  /* General padding adjustment */
+  section {
+    padding: 80px 20px 40px 20px;
+  }
+  
+  /* Navigation */
+  .nav-links {
+    display: none; /* Hidden by default on mobile */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); 
+  }
+  
+  .nav-links.open {
+    display: flex; /* Show the overlay menu */
+    transform: translateX(0); 
+  }
+  
+  .nav-links a {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+  
+  .hamburger {
+    display: block; /* Show the button */
+  }
+
+  /* Hero Section */
+  .hero {
+    /* No change needed here, the desktop centering works well for mobile too */
+  }
+  
+  .hero-content {
+    /* Ensure content has some vertical padding on small screens */
+    padding: 0 10px; 
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .resume {
+    justify-content: center;
+  }
+  
+  .social {
+    justify-content: center;
+  }
+
+  /* Skills */
+  .skills {
+    justify-content: center;
+  }
+
+  /* Grids Stacked */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Certifications */
+  .certificate-viewer {
+      gap: 10px;
+  }
+  
+  .nav-btn {
+      padding: 10px 8px;
+  }
+}
